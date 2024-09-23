@@ -37,7 +37,7 @@
 <body class="relative lexend-font">
     <header class=" fixed top-0 left-0 right-0 backdrop-blur-2xl pb-5 ">
         <!-- navigation bar start ################################################################################### -->
-        <section class="  py-6">
+        <section class=" py-6">
             <div class="navbar lg:w-11/12 mx-auto">
                 <div class="navbar-start">
                     <!-- navbar Button -->
@@ -63,8 +63,8 @@
         <!-- navigation bar end ################################################################################### -->
         <!-- functionality -->
         <div class="flex justify-center items-center space-x-4  mt-9 pb-4 ">
-            <button class="btn btn-outline  font-semibold text-xl bg-primary border-none">Donation</button>
-            <button class="btn btn-outline  font-semibold text-xl">History</button>
+            <button id="donation-btn" class="btn btn-outline  font-semibold text-xl bg-primary border-none">Donation</button>
+            <button id="history-btn" class="btn btn-outline  font-semibold text-xl">History</button>
         </div>
     </header>
 
@@ -72,7 +72,7 @@
         <section class="lg:w-10/12 mx-auto mt-64">
 
             <!-- Donation section -->
-            <div class="">
+            <div id="donate-section" class="">
                 <!-- donate-1 -->
                 <div class="grid grid-cols-2 gap-x-8 bg-base-100 border border-gray-300 p-8 rounded-2xl lg:my-8">
                     <div class="bg-cover rounded-xl" style="background-image: url(assets/noakhali.png);"></div>
@@ -152,11 +152,16 @@
                     </div>
                 </div>
             </div>
+
+            <!-- history section -->
+             <section id="history-section" class="hidden">
+
+             </section>
         </section>
     </main>
 <!-- modall -->
-    <dialog id="my_modal" className="modal" class="text-center py-6 px-28 rounded-2xl ">
-        <div className="modal-box " class="space-y-4">
+    <dialog id="my_modal" class="text-center py-6 px-28 rounded-2xl shadow-2xl shadow-black">
+        <div class="space-y-4">
             <h3 class="font-bold text-2xl">Congratulation!</h3>
             <img class="mx-auto w-16" src="assets/coin.png" alt="">
             <p>You Have Donated for Humankind</p>
@@ -170,22 +175,45 @@
 
     <script src="function.js"></script>
     <script>
+// donate for quota
         document.getElementById('donate-btn-quota').addEventListener('click', function () {
+            history('quota-amount','history-section',"Aid for Injured in the Quota Movement, Bangladesh.");
             donate('quota-amount', 'total-donation-quota');
         });
-
+// donate for feni
         document.getElementById('donate-btn-feni').addEventListener('click', function () {
+            history('feni-amount','history-section',"Flood Relief in Feni,Bangladesh.");
             donate('feni-amount', 'total-donation-feni');
+            
         });
-
+// donate for noakhali
         document.getElementById('doante-btn-noakhali').addEventListener('click', function () {
+            history('noakhali-amount','history-section',"Flood Relief in Noakhali,Bangladesh.");
             donate('noakhali-amount', 'toal-donation-noakhali');
         })
-
-
+// close modal
         document.getElementById('closeBtn').addEventListener('click', function () {
             document.getElementById('my_modal').close();
         });
+// history button activated
+        document.getElementById('history-btn').addEventListener('click',function () {
+            document.getElementById('history-btn').classList.add('bg-primary' ,'border-none');
+            document.getElementById('donation-btn').classList.remove('bg-primary' ,'border-none');
+            
+            document.getElementById('history-section').classList.remove('hidden');
+            document.getElementById('donate-section').classList.add('hidden');
+        });
+
+        // donate button
+
+        document.getElementById('donation-btn').addEventListener('click',function(){
+            document.getElementById('donation-btn').classList.add('bg-primary' ,'border-none');
+            document.getElementById('history-btn').classList.remove('bg-primary' ,'border-none');
+
+            document.getElementById('donate-section').classList.remove('hidden');
+            document.getElementById('history-section').classList.add('hidden');
+           
+        })
 
     </script>
 </body>
