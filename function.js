@@ -18,7 +18,7 @@ function history(amountId, id, text) {
     const date = new Date();
     div.innerHTML = `
             <h1 class="text-lg lg:text-xl font-bold">${getValue(amountId)} Taka is Donated for ${text} </h1>
-            <p>Date: ${date} </p>
+            <p class="text-textColor">Date: ${date} </p>
             `
     document.getElementById(id).appendChild(div);
 }
