@@ -17,15 +17,16 @@ function history(amountId, id, text) {
     div.style.marginTop = "20px"
     const date = new Date();
     div.innerHTML = `
-            <h1 class="text-lg lg:text-xl font-bold">${getValue(amountId)} Taka is Donated for ${text} </h1>
+            <h1 class="text-lg lg:text-xl font-bold">${getValue(amountId)} Taka is ${text}. </h1>
             <p class="text-textColor">Date: ${date} </p>
             `
     document.getElementById(id).appendChild(div);
 }
 // total donate sections function
-function donate(amount, totalDonationAmount, text) {
+function donate(amount, totalDonationAmount, titleId) {
     const inputValue = getValue(amount);
     const donateAmount = getTextValue(totalDonationAmount);
+    const donateTitle = document.getElementById(titleId).innerText;
     const totalRequiredBalance = getTextValue('required-balance');
     if (inputValue < 1 || isNaN(inputValue)) {
         alert(`sorry sir you can't donate less than zero amount`);
@@ -33,7 +34,7 @@ function donate(amount, totalDonationAmount, text) {
     }
     else {
         const modal = document.getElementById('my_modal').showModal();
-        const historySection = history(amount, 'history-section', text);
+        const historySection = history(amount, 'history-section', donateTitle);
         return document.getElementById(totalDonationAmount).innerText = donateAmount + inputValue, document.getElementById('required-balance').innerText = totalRequiredBalance - inputValue, document.getElementById(amount).value = '', modal, historySection;
     }
 }

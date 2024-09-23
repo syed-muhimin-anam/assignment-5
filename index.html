@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home page</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
@@ -37,36 +36,39 @@
 <body class="relative lexend-font">
     <header class=" sticky top-0 left-0 right-0 backdrop-blur-2xl lg:pb-5 ">
         <!-- navigation bar start ################################################################################### -->
-        <section class=" lg:py-6">
+        <section class=" lg:py-6 bg-yellow-50">
             <div class="navbar  w-11/12 mx-auto grid grid-cols-3 lg:col-span-1">
-                <!-- navbar Button -->
+                <!-- navbar Button ############################# -->
                 <div class="navbar-start ">
                     <div>
-                        <button id="blog-btn" class="btn btn-sm lg:btn-md btn-active bg-primary font-semibold text-lg lg:text-xl">Blog</button>
+                        <button id="blog-btn"
+                            class="btn btn-sm lg:btn-md btn-active bg-primary font-semibold text-lg lg:text-xl">Blog</button>
                     </div>
                 </div>
-                <!-- webpage title , name -->
+                <!-- webpage title , name ###################### -->
                 <div class="  col-span-2 lg:col-span-1 flex justify-end lg:justify-center items-center">
                     <div class="flex justify-center items-center space-x-2 lg:space-x-4">
                         <img class="w-8 *:lg:w-10" src="assets/logo.png" alt="">
-                    <h1 class="text-lg lg:text-3xl font-semibold hidden lg:block ">Donate Bangladesh</h1>
-                    <h1 class="text-lg lg:text-3xl font-semibold lg:hidden  ">Donate BD</h1>
+                        <h1 class="text-lg lg:text-3xl font-semibold hidden lg:block ">Donate Bangladesh</h1>
+                        <h1 class="text-lg lg:text-3xl font-semibold lg:hidden  ">Donate BD</h1>
                     </div>
                 </div>
-                <!-- required amount -->
-                <div class="  col-span-3 lg:col-span-1 flex justify-center lg:justify-end lg:items-center w-full mt-5 lg:mt-0">
+                <!-- required amount ###########################3-->
+                <div
+                    class="  col-span-3 lg:col-span-1 flex justify-center lg:justify-end lg:items-center w-full mt-5 lg:mt-0">
                     <div class="flex justify-center items-center  space-x-3">
                         <img src="assets/coin.png" alt="">
                         <h1 class="text-4xl lg:text-2xl font-medium">
-                        <span id="required-balance">975500</span>
-                        BDT
-                    </h1>
+                            <span id="required-balance">975500</span>
+                            BDT
+                        </h1>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- navigation bar end ################################################################################### -->
-        <!-- functionality -->
+        <!-- navigation bar end ##################################################################################### -->
+
+        <!-- Donation and history button ####################### -->
         <div class="flex justify-center items-center space-x-4  lg:mt-5 pb-4 ">
             <button id="donation-btn"
                 class="btn btn-outline  font-semibold lg:text-xl bg-primary border-none btn-sm lg:btn-md">Donation</button>
@@ -76,11 +78,14 @@
 
     <main>
         <section class="w-11/12 mx-auto mt-8">
-            <!-- Donation section -->
+
+            <!-- Donation section ####################################################################################-->
             <div id="donate-section" class="space-y-5">
-                <!-- donate-1 -->
-                <div class="grid gap-y-4 lg:grid-cols-2 gap-x-8 bg-base-100 border border-gray-300 p-8 rounded-2xl lg:mb-8 ">
-                    <div class="bg-cover rounded-xl h-52 lg:h-auto" style="background-image: url(assets/noakhali.png);"></div>
+                <!-- donate-1 ############################## -->
+                <div
+                    class="grid gap-y-4 lg:grid-cols-2 gap-x-8 bg-base-100 border border-gray-300 p-8 rounded-2xl lg:mb-8 ">
+                    <div class="bg-cover rounded-xl h-52 lg:h-auto" style="background-image: url(assets/noakhali.png);">
+                    </div>
                     <div>
                         <div class="flex space-x-3 bg-secoendary w-fit px-4 lg:py-3 py-1 rounded-lg mb-4">
                             <img class="w-5 lg:w-7" src="assets/coin.png" alt="">
@@ -90,8 +95,10 @@
                             </h1>
                         </div>
 
-                        <h2 class="card-title  lg:text-2xl font-bold">Donate for Flood at Noakhali, Bangladesh</h2>
-                        <p class="text-textColor mt-4 text-sm lg:text-base"> The recent floods in Noakhali have caused significant damage to
+                        <h2 id="noakhali-title" class="card-title  lg:text-2xl font-bold">Donate for Flood at Noakhali,
+                            Bangladesh</h2>
+                        <p class="text-textColor mt-4 text-sm lg:text-base"> The recent floods in Noakhali have caused
+                            significant damage to
                             homes infrastructure. Your donation will help provide essential supplies and to those
                             affected by this disaster. Every contribution, big or small, makes difference. Please join
                             us in supporting the relief efforts and making a positive impact on the lives of those in
@@ -99,14 +106,17 @@
                         <div class="space-y-4 mt-6">
                             <input id="noakhali-amount" type="number" placeholder="Write Donation Amount In Number"
                                 class="input input-bordered w-full " />
-                            <button id="doante-btn-noakhali" class="btn bg-primary w-full font-bold lg:text-xl">Donate Now</button>
+                            <button id="doante-btn-noakhali" class="btn bg-primary w-full font-bold lg:text-xl">Donate
+                                Now</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- donate-2 -->
-                <div class="grid gap-y-4 lg:grid-cols-2 gap-x-8 bg-base-100 border border-gray-300 p-8 rounded-2xl lg:my-8">
-                    <div class="bg-cover bg-center rounded-xl h-52 lg:h-auto " style="background-image: url(assets/feni.png);"></div>
+                <!-- donate-2 ##############################-->
+                <div
+                    class="grid gap-y-4 lg:grid-cols-2 gap-x-8 bg-base-100 border border-gray-300 p-8 rounded-2xl lg:my-8">
+                    <div class="bg-cover bg-center rounded-xl h-52 lg:h-auto "
+                        style="background-image: url(assets/feni.png);"></div>
                     <div>
                         <div class="flex space-x-3 bg-secoendary w-fit px-4 lg:py-3 py-1 rounded-lg mb-4">
                             <img class="w-5 lg:w-7" src="assets/coin.png" alt="">
@@ -116,19 +126,28 @@
                             </h1>
                         </div>
 
-                        <h2 class="card-title lg:text-2xl font-bold">Donate for Flood Relief in Feni, Bangladesh</h2>
-                        <p class="text-textColor mt-4 text-sm lg:text-base"> The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.</p>
+                        <h2 id="feni-title" class="card-title lg:text-2xl font-bold">Donate for Flood Relief in Feni,
+                            Bangladesh</h2>
+                        <p class="text-textColor mt-4 text-sm lg:text-base"> The recent floods in Feni have devastated
+                            local communities, leading to severe disruption and loss. Your generous donation will help
+                            provide immediate aid, including food, clean water, and medical supplies, to those affected
+                            by this calamity. Together, we can offer crucial support and help rebuild lives in the
+                            aftermath of this disaster. Every contribution counts towards making a real difference.
+                            Please consider donating today to assist those in urgent need.</p>
                         <div class="space-y-4 mt-6">
                             <input id="feni-amount" type="number" placeholder="Write Donation Amount In Number"
                                 class="input input-bordered w-full " />
-                            <button id="donate-btn-feni" class="btn bg-primary w-full font-bold lg:text-xl">Donate Now</button>
+                            <button id="donate-btn-feni" class="btn bg-primary w-full font-bold lg:text-xl">Donate
+                                Now</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- donate-3 -->
-                <div class="grid gap-y-4 lg:grid-cols-2 gap-x-8 bg-base-100 border border-gray-300 p-8 rounded-2xl lg:my-8">
-                    <div class="bg-cover bg-top rounded-xl h-52 lg:h-auto" style="background-image: url(assets/quota-protest.png);">
+                <!-- donate-3 ##############################-->
+                <div
+                    class="grid gap-y-4 lg:grid-cols-2 gap-x-8 bg-base-100 border border-gray-300 p-8 rounded-2xl lg:my-8">
+                    <div class="bg-cover bg-top rounded-xl h-52 lg:h-auto"
+                        style="background-image: url(assets/quota-protest.png);">
                     </div>
                     <div>
                         <div class="flex space-x-3 bg-secoendary w-fit px-4 lg:py-3 py-1 rounded-lg mb-4">
@@ -139,46 +158,63 @@
                             </h1>
                         </div>
 
-                        <h2 class="card-title lg:text-2xl font-bold">Aid for Injured in the Quota Movement</h2>
-                        <p class="text-textColor mt-4 text-sm lg:text-base"> The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.</p>
+                        <h2 id="quota-title" class="card-title lg:text-2xl font-bold">Donate for Injured in the Quota
+                            Movement</h2>
+                        <p class="text-textColor mt-4 text-sm lg:text-base"> The recent Quota movement has resulted in
+                            numerous injuries and significant hardship for many individuals. Your support is crucial in
+                            providing medical assistance, rehabilitation, and necessary supplies to those affected. By
+                            contributing, you help ensure that injured individuals receive the care and support they
+                            need during this challenging time. Every donation plays a vital role in alleviating their
+                            suffering and aiding in their recovery. Please consider making a donation to support these
+                            brave individuals in their time of need.</p>
                         <div class="space-y-4 mt-6">
                             <input id="quota-amount" type="number" placeholder="Write Donation Amount In Number"
                                 class="input input-bordered w-full " />
-                            <button id="donate-btn-quota" class="btn bg-primary w-full font-bold lg:text-xl">Donate Now</button>
+                            <button id="donate-btn-quota" class="btn bg-primary w-full font-bold lg:text-xl">Donate
+                                Now</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- donate-4 -->
-             <div class="grid gap-y-4 lg:grid-cols-2 gap-x-8 bg-base-100 border border-gray-300 p-8 rounded-2xl lg:mb-8 ">
-                <div class="bg-cover rounded-xl h-52 lg:h-auto" style="background-image: url(assets/orphan.jpg);"></div>
-                <div>
-                    <div class="flex space-x-3 bg-secoendary w-fit px-4 lg:py-3 py-1 rounded-lg mb-4">
-                        <img class="w-5 lg:w-7" src="assets/coin.png" alt="">
-                        <h1 class="lg:text-xl font-medium">
-                            <span id="total-donation-orphan">15400</span>
-                            BDT
-                        </h1>
+                <!-- donate-4 ##############################-->
+                <div
+                    class="grid gap-y-4 lg:grid-cols-2 gap-x-8 bg-base-100 border border-gray-300 p-8 rounded-2xl lg:mb-8 ">
+                    <div class="bg-cover rounded-xl h-52 lg:h-auto" style="background-image: url(assets/orphan.jpg);">
                     </div>
-                    <h2 class="card-title  lg:text-2xl font-bold">Donate for orphan children of Bangladesh</h2>
-                    <p class="text-textColor mt-4 text-sm lg:text-base"> Every child deserves a chance to dream, grow, and thrive. Sadly, many orphaned children in Bangladesh lack access to basic necessities like nutritious food, safe shelter, proper medical treatment, and quality education. With your support, we can change their lives, providing them with the love, care, and opportunities they deserve. Donate today and help us build a brighter future for these children, one filled with hope, health, and happiness.</p>
-                    <div class="space-y-4 mt-6">
-                        <input id="orphan-amount" type="number" placeholder="Write Donation Amount In Number"
-                            class="input input-bordered w-full " />
-                        <button id="donate-btn-orphan" class="btn bg-primary w-full font-bold lg:text-xl">Donate Now</button>
+                    <div>
+                        <div class="flex space-x-3 bg-secoendary w-fit px-4 lg:py-3 py-1 rounded-lg mb-4">
+                            <img class="w-5 lg:w-7" src="assets/coin.png" alt="">
+                            <h1 class="lg:text-xl font-medium">
+                                <span id="total-donation-orphan">15400</span>
+                                BDT
+                            </h1>
+                        </div>
+                        <h2 id="orphan-title" class="card-title  lg:text-2xl font-bold">Donate for orphan children of
+                            Bangladesh</h2>
+                        <p class="text-textColor mt-4 text-sm lg:text-base"> Every child deserves a chance to dream,
+                            grow, and thrive. Sadly, many orphaned children in Bangladesh lack access to basic
+                            necessities like nutritious food, safe shelter, proper medical treatment, and quality
+                            education. With your support, we can change their lives, providing them with the love, care,
+                            and opportunities they deserve. Donate today and help us build a brighter future for these
+                            children, one filled with hope, health, and happiness.</p>
+                        <div class="space-y-4 mt-6">
+                            <input id="orphan-amount" type="number" placeholder="Write Donation Amount In Number"
+                                class="input input-bordered w-full " />
+                            <button id="donate-btn-orphan" class="btn bg-primary w-full font-bold lg:text-xl">Donate
+                                Now</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            </div>
 
-             
 
-                   
-            <!-- history section -->
-            <section id="history-section" class="hidden"> </section>
+
+
+            <!-- history section ####################################################################################-->
+            <section id="history-section" class="hidden mb-10"> </section>
         </section>
     </main>
-    <!-- modall -->
+    <!-- modall ####################################################################################################-->
     <dialog id="my_modal" class="text-center py-4 lg:py-6 px-10 lg:px-28 rounded-2xl shadow-2xl shadow-black">
         <div class="space-y-3 lg:space-y-4">
             <h3 class="font-bold text-xl lg:text-2xl">Congratulation!</h3>
@@ -191,7 +227,7 @@
 
 
 
-
+<!-- script ######################################################################################################## -->
     <script src="function.js"></script>
     <script src="doante.js"></script>
 
@@ -200,6 +236,7 @@
             window.location.href = "./blog.html";
         });
     </script>
+
 </body>
 
 </html>

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
@@ -37,15 +36,15 @@
 <body class=" lexend-font">
     <header class=" sticky top-0 left-0 right-0 backdrop-blur-2xl pb-5 ">
         <!-- navigation bar start ################################################################################### -->
-        <section class=" lg:py-6">
+        <section class=" lg:py-6 bg-yellow-50">
             <div class="navbar  w-11/12 mx-auto grid grid-cols-3 lg:col-span-1">
-                <!-- navbar Button -->
+                <!-- navbar Button #######################################-->
                 <div class="navbar-start ">
                     <div>
                         <button id="home-btn" class="btn btn-sm lg:btn-md btn-active bg-primary font-semibold text-lg lg:text-xl">Home</button>
                     </div>
                 </div>
-                <!-- webpage title , name -->
+                <!-- webpage title , name #######################################-->
                 <div class="  col-span-2 lg:col-span-1 flex justify-end lg:justify-center items-center">
                     <div class="flex justify-center items-center space-x-2 lg:space-x-4">
                         <img class="w-8 *:lg:w-10" src="assets/logo.png" alt="">
@@ -53,7 +52,7 @@
                     <h1 class="text-lg lg:text-3xl font-semibold lg:hidden  ">Donate BD</h1>
                     </div>
                 </div>
-                <!-- required amount -->
+                <!-- required amount #######################################-->
                 <div class="  col-span-3 lg:col-span-1 flex justify-center lg:justify-end lg:items-center w-full mt-5 lg:mt-0">
                     <div class="flex justify-center items-center  space-x-3">
                         <img src="assets/coin.png" alt="">
@@ -67,11 +66,13 @@
         </section>
         <!-- navigation bar end ################################################################################### -->
     </header>
+
+    <!-- FAQ section start ######################################################################################### -->
     <main class="w-11/12 mx-auto">
         <h1 class="text-4xl lg:text-6xl font-bold mb-10 text-center lg:text-start">Important FAQ <span class="text-6xl lg:text-8xl">?</span></h1>
 
         <div class="join join-vertical w-full">
-            <!-- question 1 -->
+            <!-- question 1 #################################-->
             <div class="collapse collapse-arrow join-item border-base-300 border">
                 <input type="radio" name="my-accordion-4" checked="checked" />
                 <div class="collapse-title text-xl font-medium">1. What is the Document Object Model (DOM)?</div>
@@ -79,7 +80,7 @@
                     <p class=" text-textColor">The Document Object Model (DOM) is a programming API for HTML and XML documents. It defines the logical structure of documents and the way a document is accessed and manipulated.</p>
                 </div>
             </div>
-            <!-- question 2 -->
+            <!-- question 2 #################################-->
             <div class="collapse collapse-arrow join-item border-base-300 border">
                 <input type="radio" name="my-accordion-4" />
                 <div class="collapse-title text-xl font-medium">2. How do you select an element from the DOM?</div>
@@ -87,7 +88,7 @@
                     <p class=" text-textColor">I can select an element by using Tag Name, by ID, by Class Name, by Query Selector and Query Selector All.</p>
                 </div>
             </div>
-            <!-- question 3 -->
+            <!-- question 3 #################################-->
             <div class="collapse collapse-arrow join-item border-base-300 border">
                 <input type="radio" name="my-accordion-4" />
                 <div class="collapse-title text-xl font-medium">3. What is event delegation in the context of the DOM,
@@ -96,7 +97,7 @@
                     <p class=" text-textColor">  Event delegation is a technique in JavaScript that allows us to manage events more efficiently, especially when dealing with multiple elements. Instead of attaching event listeners to each child element individually, we add a single event listener to a common parent element.  </p>
                 </div>
             </div>
-            <!-- question 4 -->
+            <!-- question 4 #################################-->
             <div class="collapse collapse-arrow join-item border-base-300 border">
                 <input type="radio" name="my-accordion-4" />
                 <div class="collapse-title text-xl font-medium">4. How do you manipulate an element's attributes and
@@ -111,6 +112,8 @@
         </div>
     </main>
 
+
+<!-- script ######################################################################################################## -->
     <script>
         document.getElementById('home-btn').addEventListener('click', function () {
             window.location.href = "./index.html";
@@ -118,5 +121,4 @@
     </script>
 
 </body>
-
 </html>
