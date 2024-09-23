@@ -42,7 +42,7 @@
                 <div class="navbar-start">
                     <!-- navbar Button -->
                     <div>
-                        <button class="btn btn-active bg-primary font-semibold text-xl">Blog</button>
+                        <button id="blog-btn" class="btn btn-active bg-primary font-semibold text-xl">Blog</button>
                     </div>
                 </div>
                 <!-- webpage title , name -->
@@ -70,7 +70,6 @@
 
     <main>
         <section class="lg:w-10/12 mx-auto mt-64">
-
             <!-- Donation section -->
             <div id="donate-section" class="">
                 <!-- donate-1 -->
@@ -152,11 +151,8 @@
                     </div>
                 </div>
             </div>
-
             <!-- history section -->
-             <section id="history-section" class="hidden">
-
-             </section>
+             <section id="history-section" class="hidden"> </section>
         </section>
     </main>
 <!-- modall -->
@@ -174,47 +170,11 @@
 
 
     <script src="function.js"></script>
+    <script src="doante.js"></script>
     <script>
-// donate for quota
-        document.getElementById('donate-btn-quota').addEventListener('click', function () {
-            history('quota-amount','history-section',"Aid for Injured in the Quota Movement, Bangladesh.");
-            donate('quota-amount', 'total-donation-quota');
+        document.getElementById('blog-btn').addEventListener('click',function () {
+            window.location.href="/blog.html";
         });
-// donate for feni
-        document.getElementById('donate-btn-feni').addEventListener('click', function () {
-            history('feni-amount','history-section',"Flood Relief in Feni,Bangladesh.");
-            donate('feni-amount', 'total-donation-feni');
-            
-        });
-// donate for noakhali
-        document.getElementById('doante-btn-noakhali').addEventListener('click', function () {
-            history('noakhali-amount','history-section',"Flood Relief in Noakhali,Bangladesh.");
-            donate('noakhali-amount', 'toal-donation-noakhali');
-        })
-// close modal
-        document.getElementById('closeBtn').addEventListener('click', function () {
-            document.getElementById('my_modal').close();
-        });
-// history button activated
-        document.getElementById('history-btn').addEventListener('click',function () {
-            document.getElementById('history-btn').classList.add('bg-primary' ,'border-none');
-            document.getElementById('donation-btn').classList.remove('bg-primary' ,'border-none');
-            
-            document.getElementById('history-section').classList.remove('hidden');
-            document.getElementById('donate-section').classList.add('hidden');
-        });
-
-        // donate button
-
-        document.getElementById('donation-btn').addEventListener('click',function(){
-            document.getElementById('donation-btn').classList.add('bg-primary' ,'border-none');
-            document.getElementById('history-btn').classList.remove('bg-primary' ,'border-none');
-
-            document.getElementById('donate-section').classList.remove('hidden');
-            document.getElementById('history-section').classList.add('hidden');
-           
-        })
-
     </script>
 </body>
 
