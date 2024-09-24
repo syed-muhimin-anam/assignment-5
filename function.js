@@ -1,12 +1,14 @@
 // get inner text value
 function getTextValue(id) {
     const catchTarget = document.getElementById(id).innerText;
-    return parseFloat(catchTarget);
+    const catchTargetsNumber = parseFloat(catchTarget)
+    return catchTargetsNumber;
 }
 // get input value
 function getValue(id) {
     const catchTarget = document.getElementById(id).value;
-    return parseFloat(catchTarget);
+    const catchTargetsNumber =parseFloat(catchTarget)
+    return catchTargetsNumber;
 }
 // history card
 function history(amountId, id, text) {
@@ -35,7 +37,9 @@ function donate(amount, totalDonationAmount, titleId) {
     else {
         const modal = document.getElementById('my_modal').showModal();
         const historySection = history(amount, 'history-section', donateTitle);
-        return document.getElementById(totalDonationAmount).innerText = donateAmount + inputValue, document.getElementById('required-balance').innerText = totalRequiredBalance - inputValue, document.getElementById(amount).value = '', modal, historySection;
+        const displayDonateAmount = donateAmount + inputValue;
+        const displayRequiredBalance = totalRequiredBalance - inputValue;
+        return document.getElementById(totalDonationAmount).innerText = displayDonateAmount.toFixed(2) , document.getElementById('required-balance').innerText = displayRequiredBalance.toFixed(2), document.getElementById(amount).value = '', modal, historySection;
     }
 }
 
