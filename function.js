@@ -29,7 +29,7 @@ function donate(amount, totalDonationAmount, titleId) {
     const donateTitle = document.getElementById(titleId).innerText;
     const totalRequiredBalance = getTextValue('required-balance');
     if (inputValue < 1 || isNaN(inputValue) || inputValue > totalRequiredBalance){
-        alert(`sorry sir you can't donate less than zero amount`);
+        alert(`sorry you can't donate less than one tk or above required amount and you have to input the amount in numbers.`);
         return document.getElementById(amount).value = '';
     }
     else {
